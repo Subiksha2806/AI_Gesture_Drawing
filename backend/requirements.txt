@@ -1,0 +1,10 @@
+fastapi==0.139.0
+uvicorn==0.50.0
+websockets==14.2
+numpy==2.5.0
+opencv-python==5.0.0.93
+opencv-contrib-python==5.0.0.93
+mediapipe==0.10.35
+pillow==12.3.0
+pytesseract==0.3.13
+python-multipart==0.0.9

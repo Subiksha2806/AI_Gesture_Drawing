@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased overflow-hidden select-none;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(139, 92, 246, 0.02) 0px, transparent 50%);
+  }
+
+  body.light {
+    @apply bg-slate-50 text-slate-900;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(139, 92, 246, 0.01) 0px, transparent 50%);
+  }
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  @apply bg-slate-900/60 backdrop-blur-md border border-slate-800/50 shadow-xl rounded-2xl;
+}
+
+.light .glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-slate-200/50 shadow-lg rounded-2xl;
+}
+
+.glass-card {
+  @apply bg-slate-900/40 backdrop-blur-sm border border-slate-800/40 shadow-md rounded-xl hover:bg-slate-900/60 transition-all duration-300;
+}
+
+.light .glass-card {
+  @apply bg-white/40 backdrop-blur-sm border border-slate-200/40 shadow-sm rounded-xl hover:bg-white/60 transition-all duration-300;
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800/80 rounded-full hover:bg-slate-700/80;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  @apply bg-slate-200/80 rounded-full hover:bg-slate-300/80;
+}
+
+/* Neon glow helper */
+.neon-glow {
+  box-shadow: 0 0 15px currentColor;
+}
+
+/* Drawing grid canvas background */
+.canvas-grid {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+}
+
+.light .canvas-grid {
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+}
+
+/* Clean sliders styling */
+input[type="range"] {
+  @apply appearance-none bg-slate-800 rounded-full h-1.5 cursor-pointer outline-none;
+}
+
+.light input[type="range"] {
+  @apply bg-slate-200;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 rounded-full bg-brand-500 hover:bg-brand-600 transition-colors shadow-md;
+}
+
+/* Calligraphy/Cursor custom styling */
+.air-cursor {
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.1s ease, height 0.1s ease;
+}
